@@ -4,4 +4,14 @@
   </h1>
 
   <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+  <button (click)="OpenProject()">
+    {{ 'PAGES.HOME.OPEN_PROJECT' | translate }}
+  </button>
+  <div>
+    <ul>
+      <li *ngFor="let item of languages">
+        {{item}}
+      </li>
+    </ul>
+  </div>
 </div>

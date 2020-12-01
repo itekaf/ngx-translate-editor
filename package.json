@@ -38,7 +38,8 @@
     "test:watch": "ng test",
     "e2e": "npm run build:prod && cross-env TS_NODE_PROJECT='e2e/tsconfig.e2e.json' mocha --timeout 300000 --require ts-node/register e2e/**/*.e2e.ts",
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "lint:translate": "npx ngx-translate-lint -p ./src/app/**/*.{html,ts} -l ./src/assets/i18n/*.json"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "10.0.1",
@@ -98,5 +99,9 @@
   },
   "engines": {
     "node": ">=10.13.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "ngx-translate-lint": "1.8.2"
   }
 }

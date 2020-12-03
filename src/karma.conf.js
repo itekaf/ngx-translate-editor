@@ -24,22 +24,22 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
+    autoWatch: true,
     browsers: ['AngularElectron'],
+    singleRun: true,
     customLaunchers: {
       AngularElectron: {
         base: 'Electron',
-        flags: [
-          '--remote-debugging-port=9222'
-        ],
         browserWindowOptions: {
           webPreferences: {
             nodeIntegration: true,
-            nodeIntegrationInSubFrames: true,
-            allowRunningInsecureContent: true,
-            enableRemoteModule: true
+            allowRunningInsecureContent: true
           }
         }
       }
+    },
+    client: {
+      useIframe: false
     }
   });
 };

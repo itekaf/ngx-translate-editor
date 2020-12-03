@@ -25,9 +25,7 @@ export class ElectronService {
     if (this.isElectron) {
       this.ipcRenderer = window.require('electron').ipcRenderer;
       this.webFrame = window.require('electron').webFrame;
-
-      // If you wan to use remote object, pleanse set enableRemoteModule to true in main.ts
-      // this.remote = window.require('electron').remote;
+      this.remote = window.require('electron').remote;
 
       this.childProcess = window.require('child_process');
       this.fs = window.require('fs');

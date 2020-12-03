@@ -16,7 +16,7 @@
       "dom"
     ]
   },
-  "files": [
+  "include": [
     "main.ts"
   ],
   "exclude": [

@@ -26,13 +26,16 @@ export default function setup(): void {
       args: [path.join(__dirname, '..')],
       webdriverOptions: {}
     });
-
     await this.app.start();
+    const browser = this.app.client;
+    await browser.waitUntilWindowLoaded();
+
+    browser.timeouts('script', 15000);
   });
 
-  afterEach(async function () {
+  afterEach(function () {
     if (this.app && this.app.isRunning()) {
-      await this.app.stop();
+      return this.app.stop();
     }
   });
 }

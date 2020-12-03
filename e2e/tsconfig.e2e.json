@@ -2,13 +2,12 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/e2e",
-    "module": "commonjs",
+    "module": "es2015",
     "types": [
-      "mocha",
-      "node"
+      "mocha"
     ]
   },
   "include": [
-    "**.ts"
+    "**/*.ts"
   ]
 }

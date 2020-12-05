@@ -14,10 +14,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { HomeModule } from './modules/home/home.module';
 
 import { AppComponent } from './app.component';
 import { ProjectModule } from 'app/modules/project/project.module';
+import { MatSliderModule, MatTabsModule } from '@angular/material';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -32,8 +32,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     HttpClientModule,
     CoreModule,
     SharedModule,
-    HomeModule,
     ProjectModule,
+    MatTabsModule,
+    MatSliderModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {

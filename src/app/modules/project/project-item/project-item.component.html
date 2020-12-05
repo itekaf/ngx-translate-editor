@@ -1,1 +1,22 @@
-<p>project-item works!</p>
+<mat-card>
+  {{ project.name }}
+  {{ project.path }}
+  {{ project.viewPath }}
+  {{ project.languagesPath }}
+  <button mat-raised-button
+          (click)="OpenLanguagesFolder()"
+          class="example-add-tab-button">
+    Open Languages Folder
+  </button>
+  <button mat-raised-button
+          (click)="OpenViewsFolder()"
+          class="example-add-tab-button">
+    Open Views Folder
+  </button>
+  <button mat-raised-button
+          (click)="RunLint()"
+          class="example-add-tab-button">
+    Run Lint
+  </button>
+</mat-card>
+

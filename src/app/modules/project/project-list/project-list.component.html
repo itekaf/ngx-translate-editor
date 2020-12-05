@@ -1,1 +1,18 @@
-<p>project-list works!</p>
+<button mat-raised-button
+        class="example-add-tab-button"
+        (click)="addProject()">
+  Add new tab
+</button>
+<mat-tab-group
+  mat-align-tabs="start"
+  [selectedIndex]="selected.value"
+  (selectedIndexChange)="selected.setValue($event)"
+>
+  <div *ngFor="let project of projects">
+    <mat-tab label="{{ project.name }}">
+      <app-project-item
+        [project]="project"
+      ></app-project-item>
+    </mat-tab>
+  </div>
+</mat-tab-group>

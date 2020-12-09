@@ -1,20 +1,17 @@
 {
-  "name": "angular-electron",
-  "version": "6.4.1",
-  "description": "Angular 8 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
+  "name": "ngx-translate-editor",
+  "version": "1.0.0",
+  "description": "GUI for edit translate keys on Angular projects",
+  "homepage": "https://github.com/svoboda-rabstvo/ngx-translate-editor",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "Roman Lauryniuk",
+    "email": "romanrostislavovich@gmail.com"
   },
   "keywords": [
-    "angular",
-    "angular 8",
-    "electron",
-    "typescript",
-    "eslint",
-    "spectron",
-    "sass"
+    "internaziolation",
+    "ngx-translate",
+    "Angular 8",
+    "i18n"
   ],
   "main": "main.js",
   "private": true,

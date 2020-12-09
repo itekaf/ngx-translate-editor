@@ -20,5 +20,10 @@ module.exports = (config, options) => {
         }
     }
 
+  config.externals = {
+    ...config.externals,
+    "fs": 'require("fs")'
+  };
+
     return config;
 }

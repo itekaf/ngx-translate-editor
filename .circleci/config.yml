@@ -24,11 +24,10 @@ jobs:
           name: Lint
           command: npm run lint
       - run:
-          name: Check types
-          command: npm run check-types
-      - run:
-          name: Run tests
-          command: npm run test
+          name: Run semantic release
+          command:
+           - npm run release
+           - npm run semantic-release
 
 workflows:
   run-ci:

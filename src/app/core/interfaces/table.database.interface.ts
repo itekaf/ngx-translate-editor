@@ -1,7 +1,6 @@
-import { ITableMain } from "./table.main.interface";
-import { ITableSettings } from './table.settings.interface';
+import { TableMainInterface } from "./table.main.interface";
 
-export interface ITableDatabase {
-  main: ITableMain[],
-  settings: ITableSettings
+export interface TableDatabaseInterface {
+  main: TableMainInterface[];
+  settings: any;
 }

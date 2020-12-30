@@ -20,27 +20,23 @@ export class ProjectItemSettingsComponent implements OnInit {
   public projectLintingZombieControl: FormControl = new FormControl();
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.buildForm();
   }
 
-  public removeProjectAction() {
+  public removeProjectAction(): void {
     this.removeProjectEmitter.emit();
   }
 
-  public saveProjectLintingAction() {
+  public saveProjectLintingAction(): void {
     const projectSettings: ProjectMainSettingModel = {
       linting: this.projectLintingSettingsForm.value,
       settings: this.projectItemSettingsForm.value
-    }
+    };
     this.saveProjectLintingSettingsEmitter.emit(projectSettings);
   }
 
-  public saveProjectSettingsAction() {
-
-  }
-
-  private buildForm() {
+  private buildForm(): void {
     this.projectLintingViewsControl.setValue(this.project.settings.linting.views);
     this.projectLintingZombieControl.setValue(this.project.settings.linting.zombies);
     this.projectItemSettingsForm = new FormGroup({});

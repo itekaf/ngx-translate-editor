@@ -13,14 +13,14 @@ export class FilesService {
 
   public saveFiles(project: ProjectModel): void {
         project.languagesModel.forEach((lang: LanguagesModel) => {
-          const data: Object = {};
+          const data = {};
           project.keysModel.forEach((key: KeyModelWithLanguages) => {
-            if (!!key.languages) {
+            if (key.languages) {
               key.languages.forEach((langWithKey: LanguagesModelWithKey) => {
                 if (langWithKey.name === lang.name) {
                   data[key.name] = langWithKey.keyValue;
                 }
-              })
+              });
             }
           });
          this.electronService.fs.writeFileSync(lang.path, JSON.stringify(data, null, 4));

@@ -1,4 +1,4 @@
-import {LanguagesModel, ResultCliModel, KeyModelWithLanguages, ErrorTypes} from "ngx-translate-lint";
+import { LanguagesModel, ResultCliModel, KeyModelWithLanguages } from "ngx-translate-lint";
 import { ProjectMainSettingModel } from "./projectMainSettings.model";
 
 export class ProjectModel {

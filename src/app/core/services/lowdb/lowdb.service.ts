@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
 import FileSync from 'lowdb/adapters/FileSync';
-import lowdb from 'lowdb'
+import lowdb from 'lowdb';
 import * as path from "path";
 import { ElectronService } from '..';
-import { ITableDatabase } from './../../interfaces';
+import { TableDatabaseInterface } from './../../interfaces';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class LowdbService {
-  public databaseFolder: string = 'database';
-  public databaseExtension: string = 'json';
+  public databaseFolder = 'database';
 
   constructor(
     private electronService: ElectronService,
   ) {  }
 
-  public connect(databaseName: string, defaultObject: ITableDatabase) {
+  public connect(databaseName: string, defaultObject: TableDatabaseInterface): any {
     if (!this.electronService.fs.existsSync(this.databaseFolder)) {
       this.electronService.fs.mkdirSync(this.databaseFolder);
     }

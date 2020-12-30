@@ -1,5 +1,4 @@
-import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output, Inject} from '@angular/core';
-import {Router} from "@angular/router";
+import { Component, OnInit, Inject} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 
 import {ProjectModel} from "../../../core/models/project.model";
@@ -24,7 +23,7 @@ export class ProjectCreateDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public project: ProjectModel,
   ) { }
 
-  public ngOnInit() {
+  public ngOnInit(): void {
     this.buildForm();
   }
 
@@ -32,7 +31,7 @@ export class ProjectCreateDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  public OpenLanguagesFolderAction() {
+  public OpenLanguagesFolderAction(): void {
     this.electronService.remote.dialog.showOpenDialog({ properties: ['openDirectory']})
       .then(result => {
         const folders: string[] = result.filePaths;
@@ -49,15 +48,15 @@ export class ProjectCreateDialogComponent implements OnInit {
     });
   }
 
-  public resetProjectNameAction() {
+  public resetProjectNameAction(): void {
     this.projectNameControl.setValue('');
   }
 
-  public resetProjectLanguagesPathAction() {
+  public resetProjectLanguagesPathAction(): void {
     this.projectLanguagesPathControl.setValue('');
   }
 
-  private buildForm() {
+  private buildForm(): void {
     this.projectIdControl = new FormControl(this.project.id);
     this.projectNameControl = new FormControl(this.project.name);
     this.projectViewPathControl = new FormControl(this.project.viewPath);

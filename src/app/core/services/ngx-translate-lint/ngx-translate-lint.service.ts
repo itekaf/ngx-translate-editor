@@ -16,17 +16,17 @@ export class NgxTranslateLintService {
     ignoredMisprintKeys: [],
   };
 
-  public ignoredLanguagesPath: string = '';
+  public ignoredLanguagesPath = '';
   constructor() {}
 
   public run(viewsPath: string, languagesPath: string, config: ProjectLintingModel | undefined): ResultCliModel {
     const lintingConfig: IRulesConfig = {
       ...this.lintConfig,
-    }
+    };
 
     if (config) {
       lintingConfig.zombieKeys = config.zombies;
-      lintingConfig.keysOnViews = config.views
+      lintingConfig.keysOnViews = config.views;
     }
 
     const ngxTranslateLint = new NgxTranslateLint(viewsPath, languagesPath, this.ignoredLanguagesPath, lintingConfig);

@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
-import { ITableDatabase } from "app/core/interfaces";
+import { TableDatabaseInterface } from "app/core/interfaces";
 import { LowdbService } from './lowdb.service';
 import { ProjectModel } from 'app/core/models/project.model';
 
-const defaultObject: ITableDatabase = {
+const defaultObject: TableDatabaseInterface = {
   main: [],
   settings: {}
 };
@@ -12,37 +12,37 @@ const defaultObject: ITableDatabase = {
   providedIn: 'root'
 })
 export class ProjectLowdbService {
-  public databaseName: string = 'projects';
-  public defaultObject: ITableDatabase = defaultObject;
+  public databaseName = 'projects';
+  public defaultObject: TableDatabaseInterface = defaultObject;
 
   constructor(
     private lowdbService: LowdbService,
   ){}
 
-  public init() {
+  public init(): void {
     this.connect();
   }
-  public connect() {
+  public connect(): any {
     return this.lowdbService.connect(this.databaseName, this.defaultObject);
   }
 
-  public getAllProjects() {
+  public getAllProjects(): any {
     return this.connect().get('main').value();
   }
 
-  public getProject(id: number) {
-    this.connect().get('main').find({ id }).value()
+  public getProject(id: number): void {
+    this.connect().get('main').find({ id }).value();
   }
 
-  public setProject(item: ProjectModel) {
+  public setProject(item: ProjectModel): any {
     return this.connect().get('main').push(item).write();
   }
 
-  public updateProject(item: ProjectModel) {
+  public updateProject(item: ProjectModel): any {
     return this.connect().get('main').find({ id: item.id }).assign(item).write();
   }
 
-  public removeProject(id: number) {
-    return this.connect().get('main').remove({ id }).write()
+  public removeProject(id: number): any {
+    return this.connect().get('main').remove({ id }).write();
   }
 }

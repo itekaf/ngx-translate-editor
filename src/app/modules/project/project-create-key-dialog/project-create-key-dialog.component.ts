@@ -17,18 +17,18 @@ export class ProjectCreateKeyDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public key: KeyModelWithLanguages,
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.buildForm();
   }
 
   public onNoClickAction(): void {
     this.dialogRef.close();
   }
-  public resetKeyNameAction() {
+  public resetKeyNameAction(): void {
     this.keyNameControl.setValue("");
   }
 
-  private buildForm() {
+  private buildForm(): void {
     this.keyNameControl = new FormControl(this.key.name || "");
     this.keyFormGroup = new FormGroup({
       name: this.keyNameControl,

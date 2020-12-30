@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 // If you import a module but never use any of the imported values other than as TypeScript types,
 // the resulting javascript file will look as if you never imported the module at all.
 
-import { ElectronService } from 'app/core/services';
+import { ElectronService } from './electron.service';
 import { remote } from 'electron';
 
 @Injectable({
@@ -18,13 +18,5 @@ export class DialogService {
   ) {
     // Conditional imports
     this.remote = this.electronService.remote;
-  }
-
-  public readFolder() {
-
-  }
-
-  public readFile() {
-
   }
 }

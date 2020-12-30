@@ -1,18 +1,15 @@
 import * as shortId from 'shortid';
-import {FormControl} from '@angular/forms';
-import {Component, OnInit} from '@angular/core';
-
-import {ProjectModel} from 'app/core/models/project.model';
-import {ProjectLowdbService} from 'app/core/services/lowdb/project.lowdb.service';
-import {NgxTranslateLintService} from "../../../core/services/ngx-translate-lint/ngx-translate-lint.service";
-import {MatDialog} from "@angular/material/dialog";
-import {ProjectCreateDialogComponent} from "../project-create-dialog/project-create-dialog.component";
-import {ApplicationSettingsDialogComponent} from "../../application/application-settings-dialog/application-settings-dialog.component";
-import {AppSettingsModel, ProjectMainSettingModel} from "../../../core/models";
-import {TranslateService} from "@ngx-translate/core";
-import {AppSettingsLowdbService} from "../../../core/services/lowdb/app.settings.lowdb.service";
-import {ErrorTypes} from "ngx-translate-lint";
-import {TranslateFileFormatEnum} from "../../../core/enum";
+import { FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { ProjectModel } from 'app/core/models/project.model';
+import { ProjectLowdbService } from 'app/core/services/lowdb/project.lowdb.service';
+import { NgxTranslateLintService } from "../../../core/services/ngx-translate-lint/ngx-translate-lint.service";
+import { MatDialog } from "@angular/material/dialog";
+import { ProjectCreateDialogComponent } from "../project-create-dialog/project-create-dialog.component";
+import { ApplicationSettingsDialogComponent } from "../../application/application-settings-dialog/application-settings-dialog.component";
+import { AppSettingsModel } from "../../../core/models";
+import { TranslateService } from "@ngx-translate/core";
+import { AppSettingsLowdbService } from "../../../core/services/lowdb/app.settings.lowdb.service";
 import { defaultProjectSettings } from 'app/core/const/defaultProjectSettings.const';
 
 @Component({
@@ -32,11 +29,11 @@ export class ProjectListComponent implements OnInit {
     private appSettingsLowdbService: AppSettingsLowdbService,
   ) { }
 
-  public ngOnInit() {
+  public ngOnInit(): void {
     this.updateProjects();
   }
 
-  public createProjectAction() {
+  public createProjectAction(): void {
     const project = new ProjectModel();
     project.id = shortId.generate();
     project.name = 'New Project';
@@ -59,19 +56,17 @@ export class ProjectListComponent implements OnInit {
     });
   }
 
-  public removeProjectAction($event: ProjectModel) {
+  public removeProjectAction($event: ProjectModel): void {
     this.projectLowdbService.removeProject($event.id);
     this.updateProjects();
   }
 
-  public openProjectSettingsAction() {}
-
-  public runProjectLintingAction($event: ProjectModel) {
+  public runProjectLintingAction($event: ProjectModel): void {
     $event.lintResult = this.ngxTranslateLintService.run($event.viewPath, $event.languagesPath, $event.settings.linting);
     this.projectLowdbService.updateProject($event);
   }
 
-  public openAppSettingsAction() {
+  public openAppSettingsAction(): void {
     const dialogRef = this.dialog.open(ApplicationSettingsDialogComponent, {
       width: '550px',
       data: {}
@@ -85,11 +80,11 @@ export class ProjectListComponent implements OnInit {
     });
   }
 
-  public saveProjectSettingsAction($event: ProjectModel) {
+  public saveProjectSettingsAction($event: ProjectModel): void {
     this.projectLowdbService.updateProject($event);
   }
 
-  private updateProjects() {
+  private updateProjects(): void {
     this.projects = this.projectLowdbService.getAllProjects();
     this.projects.forEach((project: ProjectModel) => {
       project.keysModel = this.ngxTranslateLintService.getKeys(project.viewPath, project.languagesPath);

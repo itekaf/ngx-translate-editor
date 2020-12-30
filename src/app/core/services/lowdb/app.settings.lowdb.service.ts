@@ -1,11 +1,11 @@
 import { Injectable } from "@angular/core";
 import { LowdbService } from './lowdb.service';
-import { ITableDatabase } from "../../interfaces";
+import { TableDatabaseInterface } from "../../interfaces";
 
 import { AppSettingsModel } from "app/core/models";
 import {LanguagesShortEnum} from "../../enum";
 
-const defaultObject: ITableDatabase = {
+const defaultObject: TableDatabaseInterface = {
   main: [],
   settings: {
     language: LanguagesShortEnum.en,
@@ -16,25 +16,25 @@ const defaultObject: ITableDatabase = {
   providedIn: 'root'
 })
 export class AppSettingsLowdbService {
-  public databaseName: string = 'settings';
-  public defaultObject: ITableDatabase = defaultObject;
+  public databaseName = 'settings';
+  public defaultObject: TableDatabaseInterface = defaultObject;
 
   constructor(
     private lowdbService: LowdbService,
   ){}
 
-  public init() {
+  public init(): void {
     this.connect();
   }
-  public connect() {
+  public connect(): any {
     return this.lowdbService.connect(this.databaseName, this.defaultObject);
   }
 
   public getSettings(): AppSettingsModel {
-    return this.connect().get('settings').value()
+    return this.connect().get('settings').value();
   }
 
-  public setSettings(settings: AppSettingsModel) {
+  public setSettings(settings: AppSettingsModel): void {
     this.connect().set('settings', settings).write();
   }
 }

@@ -1,26 +1,7 @@
-os:
-  - linux
-  - osx
 language: node_js
-node_js:
-  - '12'
-  - '11'
-  - '10'
-dist: xenial
-sudo: required
-services:
-  - xvfb
-before_script:
-  - export DISPLAY=:99.0
-before_install:
-  - sudo dpkg --add-architecture i386
-  - wget -q -O - https://dl.winehq.org/wine-builds/Release.key | sudo apt-key add -
-  - sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
-  - sudo apt-get update
-  - sudo apt-get install --install-recommends winehq-stable -y --allow-unauthenticated
+node_js: stable
 install:
-  - npm set progress=false
-  - npm install
+  - npm install --legacy-peer-deps
 
 jobs:
   include:

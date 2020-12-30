@@ -1,0 +1,23 @@
+.project-list {
+  min-height: 100vh;
+  &-header {
+    height: 100px;
+
+    &_button {
+      min-width: 150px;
+      margin: 10px;
+    }
+  }
+
+  &-content {
+    flex: 1;
+    height: calc(100vh - 100px);
+
+    &_tab-icon {
+      margin-right: 10px;
+    }
+  }
+
+
+}
+

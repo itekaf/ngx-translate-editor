@@ -1,11 +1,22 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProjectModel } from 'app/core/models/project.model';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { ProjectAddComponent } from 'app/modules/project/project-add/project-add.component';
 import { ElectronService } from 'app/core/services';
 import { Router } from '@angular/router';
-import { NgxTranslateLintService } from 'app/core/services/ngx-translate-lint/ngx-translate-lint.service';
 import * as NodePath from "path";
+import {Form, FormControl, FormGroup} from '@angular/forms';
+import { NestedTreeControl } from '@angular/cdk/tree';
+import { ArrayDataSource } from '@angular/cdk/collections';
+import { BehaviorSubject, of as observableOf } from 'rxjs';
+import {IRulesConfig, KeyModel, KeyModelWithLanguages, LanguagesModelWithKey} from "ngx-translate-lint";
+import {ProjectCreateDialogComponent} from "../project-create-dialog/project-create-dialog.component";
+import {MatDialog} from "@angular/material/dialog";
+import {ProjectCreateKeyDialogComponent} from "../project-create-key-dialog/project-create-key-dialog.component";
+import {NgxTranslateLintService} from "../../../core/services/ngx-translate-lint/ngx-translate-lint.service";
+import {ProjectLowdbService} from "../../../core/services/lowdb/project.lowdb.service";
+import {ProjectMainSettingModel} from "../../../core/models";
+import {$e} from "codelyzer/angular/styles/chars";
+import {FilesService} from "../../../core/services/files/files.service";
+
 
 @Component({
   selector: 'app-project-item',
@@ -14,73 +25,95 @@ import * as NodePath from "path";
 })
 export class ProjectItemComponent implements OnInit {
   @Input() project: ProjectModel;
-  animal: string;
-  name: string;
+  @Output() removeProjectEmitter: EventEmitter<ProjectModel> = new EventEmitter<ProjectModel>();
+  @Output() runProjectLintingEmitter: EventEmitter<ProjectModel> = new EventEmitter<ProjectModel>()
+  @Output() saveProjectSettingsEmitter: EventEmitter<ProjectModel> = new EventEmitter<ProjectModel>();
+
+  public projectItemKeysForm: FormGroup;
+  public showFiller: boolean = false;
+
   constructor(
+    private fileService: FilesService,
+    private projectLowdbService: ProjectLowdbService,
+    private ngxTranslateLintService: NgxTranslateLintService,
     public dialog: MatDialog,
-    private electronService: ElectronService,
-    private cdRef: ChangeDetectorRef,
-    private router: Router,
-    private ngxTranslateLintService: NgxTranslateLintService
-  ) { }
+  ) {}
 
-  ngOnInit(
-
-  ) {
+  ngOnInit() {
+    this.buildForm();
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(ProjectAddComponent, {
-      width: '250px',
-      data: {name: this.name, animal: this.animal}
+  public editKeyAction(key: KeyModelWithLanguages) {
+
+  }
+
+  public removeKeyAction(key: KeyModelWithLanguages) {
+    this.project.keysModel = this.project.keysModel.filter(x => x.name !== key.name);
+  }
+
+  public saveProjectLintingSettingsAction($event: ProjectMainSettingModel) {
+    this.project.settings = $event;
+    this.saveProjectSettingsEmitter.emit(this.project);
+  }
+
+  public removeProjectAction() {
+    this.removeProjectEmitter.emit(this.project);
+  }
+
+  public openAddNewKeyDialogAction() {
+    const keyModel = new KeyModelWithLanguages("", this.getProjectLanguages());
+    const dialogRef = this.dialog.open(ProjectCreateKeyDialogComponent, {
+      width: '550px',
+      data: keyModel
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
+    dialogRef.afterClosed().subscribe((result: KeyModelWithLanguages) => {
+      if (result && result.name) {
+        const keyModel = new KeyModelWithLanguages(result.name, this.getProjectLanguages());
+        this.project.keysModel.unshift(keyModel);
+        keyModel.languages.forEach((lang, index) => {
+          this.projectItemKeysForm.addControl(index + result.name, new FormControl(lang.keyValue || ""))
+        })
+      }
     });
   }
 
-  OpenLanguagesFolder() {
-    this.electronService.remote.dialog.showOpenDialog({ properties: ['openDirectory']})
-      .then(result => {
-        const folders: string[] = result.filePaths;
-        if(folders && folders[0]) {
-          this.project.languagesPath = folders[0];
- /*         this.languages = this.readDir(folders[0]);
-          this.languages.forEach((fileName) => {
-            this.readFile(folders[0] + '\\' + fileName);
-          });*/
-          this.cdRef.markForCheck();
-        }
-      }).catch(err => {
-      console.log(err);
+  public refreshProjectAction() {
+    this.updateProject();
+  }
+
+  private getProjectLanguages() {
+    return this.project.languagesModel.map((lang) => {
+      return new LanguagesModelWithKey(lang.name, lang.path, "");
     });
   }
 
-  OpenViewsFolder() {
-    this.electronService.remote.dialog.showOpenDialog({ properties: ['openDirectory']})
-      .then(result => {
-        const folders: string[] = result.filePaths;
-        if(folders && folders[0]) {
-          this.project.viewPath = folders[0];
-          /*         this.languages = this.readDir(folders[0]);
-                   this.languages.forEach((fileName) => {
-                     this.readFile(folders[0] + '\\' + fileName);
-                   });*/
-          this.cdRef.markForCheck();
-        }
-      }).catch(err => {
-        console.log(err);
-    });
-
-
-  }
-  RunLint() {
-    const correctViewsPath: string = NodePath.normalize(NodePath.join(this.project.viewPath, `**`, `*.{html,ts}`));
-    const correctLanguagesPath: string = NodePath.normalize(NodePath.join( this.project.languagesPath, '*.json'));
-    this.ngxTranslateLintService.run(correctViewsPath, correctLanguagesPath);
+  public saveProjectAction() {
+    this.fileService.saveFiles(this.project);
+    this.updateProject();
   }
 
+  private updateProject() {
+    this.project.keysModel = this.ngxTranslateLintService.getKeys(this.project.viewPath, this.project.languagesPath);
+    this.project.lintResult = this.ngxTranslateLintService.run(this.project.viewPath, this.project.languagesPath, this.project.settings.linting);
+    this.project.languagesModel = this.ngxTranslateLintService.getLanguages(this.project.viewPath, this.project.languagesPath);
+    this.projectLowdbService.updateProject(this.project);
+  }
 
+  private buildForm() {
+    this.projectItemKeysForm = new FormGroup({});
+    this.project.keysModel.forEach((key) => {
+      key.languages.forEach((lang, index) => {
+        this.projectItemKeysForm.addControl(index + key.name, new FormControl(lang.keyValue))
+      })
+    })
+    this.projectItemKeysForm.valueChanges.subscribe((value) => {
+      this.project.keysModel.forEach((key) => {
+        key.languages.forEach((lang, index) => {
+          lang.keyValue = value[index + key.name];
+        })
+      })
+    })
+
+  }
 }

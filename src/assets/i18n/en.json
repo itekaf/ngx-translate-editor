@@ -1,7 +1,18 @@
 {
-  "PAGES": {
-      "HOME": {
-          "TITLE": "App works !"
-      }
-  }
+    "PAGES.PROJECT.ADD_PROJECT": "Add project ",
+    "PAGES.PROJECT.LANGUAGES_PATH": "Languages Path",
+    "PAGES.PROJECT.PROJECT_NAME": "Project Name",
+    "PAGES.PROJECT.ADD_KEY": "add ley",
+    "PAGES.PROJECT_SETTING.LINTING_TITLE": "Linting Settings",
+    "PAGES.PROJECT_SETTING.ZOMBIE": "Zombies Keys",
+    "PAGES.PROJECT_SETTING.VIEWS": "Views Keys",
+    "PAGES.PROJECT_SETTING.PROJECT_TITLE": "Project Settings",
+    "SHARED.BUTTONS.REMOVE_PROJECT": "Remove Project",
+    "SHARED.BUTTONS.ADD_NEW_KEY": "new key",
+    "SHARED.BUTTONS.REFRESH": "refresh",
+    "SHARED.BUTTONS.APP_SETTINGS": "Application Settings",
+    "PAGES.PROJECTS.ADD_NEW_PROJECT": "Add new project",
+    "PAGES.PROJECT_ITEM.OPEN_LANGUAGES_FOLDER": "Open Languages Folder",
+    "SHARED.BUTTONS.SAVE": "Save",
+    "SHARED.BUTTONS.CANCEL": "Cancel"
 }

@@ -1,18 +1,42 @@
-<button mat-raised-button
-        class="example-add-tab-button"
-        (click)="addProject()">
-  Add new tab
-</button>
-<mat-tab-group
-  mat-align-tabs="start"
-  [selectedIndex]="selected.value"
-  (selectedIndexChange)="selected.setValue($event)"
->
-  <div *ngFor="let project of projects">
-    <mat-tab label="{{ project.name }}">
-      <app-project-item
-        [project]="project"
-      ></app-project-item>
-    </mat-tab>
+<div class="project-list">
+  <div class="project-list-header">
+    <button mat-raised-button
+            class="project-list-header_button"
+            (click)="createProjectAction()">
+      <mat-icon>folder_open</mat-icon>
+      <br/>
+      {{ 'PAGES.PROJECTS.ADD_NEW_PROJECT' | translate }}
+    </button>
+
+    <button mat-raised-button
+            class="project-list-header_button"
+            (click)="openAppSettingsAction()">
+      <mat-icon>settings_applications</mat-icon>
+      <br/>
+      {{ 'SHARED.BUTTONS.APP_SETTINGS' | translate }}
+    </button>
   </div>
-</mat-tab-group>
+  <mat-tab-group
+    class="project-list-content"
+    mat-align-tabs="start"
+    [selectedIndex]="selected.value"
+    (selectedIndexChange)="selected.setValue($event)"
+  >
+    <div *ngFor="let project of projects">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <div class="project-list-content_tab-icon">{{ project.name }}</div>
+          <mat-icon *ngIf="project.lintResult?.errors.length !== 0" color="primary">warning</mat-icon>
+        </ng-template>
+        <app-project-item
+          style="height: 100%"
+          [project]="project"
+          (saveProjectSettingsEmitter)="saveProjectSettingsAction($event)"
+          (runProjectLintingEmitter)="runProjectLintingAction($event)"
+          (removeProjectEmitter)="removeProjectAction($event)"
+        ></app-project-item>
+      </mat-tab>
+    </div>
+  </mat-tab-group>
+</div>
+

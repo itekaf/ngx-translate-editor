@@ -1,29 +1,36 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectItemComponent } from './project-item/project-item.component';
-import { ProjectListComponent } from './project-list/project-list.component';
 import { SharedModule } from 'app/shared/shared.module';
+import { CdkTreeModule } from "@angular/cdk/tree";
 import { ProjectRoutingModule } from 'app/modules/project/project-routing.module';
-import { MatSliderModule, MatTabsModule, MatDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProjectEditComponent } from './project-edit/project-edit.component';
-import { MatCardModule } from '@angular/material/card';
-import { ProjectAddComponent } from './project-add/project-add.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatRippleModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { ProjectListComponent } from './project-list/project-list.component';
+import { ProjectItemComponent } from './project-item/project-item.component';
+import { ProjectCreateDialogComponent } from './project-create-dialog/project-create-dialog.component';
+import { ProjectItemSettingsComponent } from './project-item-settings/project-item-settings.component';
+import { ProjectCreateKeyDialogComponent } from './project-create-key-dialog/project-create-key-dialog.component';
 
 @NgModule({
-  declarations: [ProjectItemComponent, ProjectListComponent, ProjectEditComponent, ProjectAddComponent],
+  declarations: [
+    ProjectItemComponent,
+    ProjectListComponent,
+    ProjectCreateDialogComponent,
+    ProjectCreateKeyDialogComponent,
+    ProjectItemSettingsComponent
+  ],
   imports: [
-    CommonModule,  SharedModule, ProjectRoutingModule, MatTabsModule, BrowserAnimationsModule, MatCardModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatRippleModule,
-    MatDialogModule
-
+    CommonModule,
+    SharedModule,
+    ProjectRoutingModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CdkTreeModule,
+  ],
+  entryComponents: [
+    ProjectCreateDialogComponent, ProjectCreateKeyDialogComponent
   ]
 })
 export class ProjectModule { }

@@ -1,22 +1,76 @@
-<mat-card>
-  {{ project.name }}
-  {{ project.path }}
-  {{ project.viewPath }}
-  {{ project.languagesPath }}
-  <button mat-raised-button
-          (click)="OpenLanguagesFolder()"
-          class="example-add-tab-button">
-    Open Languages Folder
-  </button>
-  <button mat-raised-button
-          (click)="OpenViewsFolder()"
-          class="example-add-tab-button">
-    Open Views Folder
-  </button>
-  <button mat-raised-button
-          (click)="RunLint()"
-          class="example-add-tab-button">
-    Run Lint
-  </button>
-</mat-card>
+<div  class="project-item">
+  <mat-drawer-container class="project-item-container" autosize>
+    <mat-drawer #drawer class="project-item-sidenav" mode="side">
+      <app-project-item-settings
+        [project]="project"
+        (removeProjectEmitter)="removeProjectAction()"
+        (saveProjectLintingSettingsEmitter)="saveProjectLintingSettingsAction($event)"
+      ></app-project-item-settings>
+    </mat-drawer>
+
+    <div class="project-item-sidenav-content">
+        <div>
+          <button type="button" class="project-item-sidenav-content_settings" mat-button (click)="drawer.toggle()">
+            <mat-icon *ngIf="!drawer.opened">keyboard_arrow_right</mat-icon>
+            <mat-icon *ngIf="drawer.opened">keyboard_arrow_left</mat-icon>
+          </button>
+        </div>
+
+        <mat-card class="project-item-header">
+          <button mat-raised-button
+                  class="project-item-header_button"
+                  (click)="openAddNewKeyDialogAction()">
+            <mat-icon>vpn_key</mat-icon>
+            {{ 'SHARED.BUTTONS.ADD_NEW_KEY' | translate }}
+          </button>
+          <button mat-raised-button
+                  class="project-item-header_button"
+                  (click)="refreshProjectAction()">
+            <mat-icon>refresh</mat-icon>
+            {{ 'SHARED.BUTTONS.REFRESH' | translate }}
+          </button>
+          <button mat-raised-button
+                  class="project-item-header_button"
+                  (click)="saveProjectAction()">
+            <mat-icon>save</mat-icon>
+            {{ 'SHARED.BUTTONS.SAVE' | translate }}
+          </button>
+        </mat-card>
+      <form [formGroup]="projectItemKeysForm">
+        <div class="project-item_flex">
+
+            <div class="project-item-key">
+
+              <div *ngFor="let key of project.keysModel" class="project-item-key_content">
+                <mat-card class="project-item-content_translate">
+                  <div class="project-item-content_key">
+                    <mat-icon  class="project-item-content_key-icon">translate</mat-icon> {{ key.name }}
+                    <mat-icon color="warn" class="project-item-content_key-icon" (click)="removeKeyAction(key)">delete</mat-icon>
+                  </div>
+                  <div *ngFor="let lang of key.languages; index as i">
+                    <mat-form-field class="project-item-content_key-input">
+                      <mat-label>{{ lang.name }}</mat-label>
+                      <input matInput formControlName="{{ i + key.name}}">
+                    </mat-form-field>
+                  </div>
+                </mat-card>
+              </div>
+            </div>
+
+          <mat-card class="project-item-footer" *ngIf="project.lintResult.errors.length !== 0">
+            <div *ngFor="let error of project.lintResult.errors" class="project-item-footer_error">
+              <mat-icon *ngIf="error.errorType === 'error'" color="warn">error</mat-icon>
+              <mat-icon *ngIf="error.errorType === 'warning'" color="primary">warning</mat-icon>
+              <span *ngIf="error.errorFlow === 'views'"  class="project-item-footer_error-text">Missed key: </span>
+              <span *ngIf="error.errorFlow === 'zombie'" class="project-item-footer_error-text">Zombie key: </span>
+              <span class="project-item-footer_error-key">{{ error.value }}</span>
+            </div>
+          </mat-card>
+
+        </div>
+      </form>
+    </div>
+  </mat-drawer-container>
+</div>
+
 

@@ -26,7 +26,8 @@ function createWindow(): BrowserWindow {
 
   if (serve) {
     require('electron-reload')(__dirname, {
-      electron: require(`${__dirname}/node_modules/electron`)
+      electron: require(`${__dirname}/node_modules/electron`),
+      ignored: /i18n|[\/\\]\./
     });
     win.loadURL('http://localhost:4200');
   } else {

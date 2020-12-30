@@ -1,0 +1,101 @@
+.project-item {
+  &_flex {
+    display: flex;
+  }
+  &-sidenav-content_settings {
+    background: #fff;
+    color: gray;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    height: 200px;
+    min-width: 25px;
+    width: 25px;
+    padding: 0;
+    line-height: normal;
+    position: absolute;
+    top: 150px;
+    border-radius: 0px 5px 5px 0;
+  }
+
+  .mat-icon-button {
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+  }
+
+  &-key {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    word-break: break-all;
+
+    &_content {
+      width: 425px;
+      max-width: 500px;
+    }
+  }
+
+  &-header {
+    margin: 10px;
+
+    &_button {
+      margin: 0 10px;
+    }
+  }
+
+  &-content-translate {
+    margin: 10px;
+    flex: 1 1 auto;
+  }
+
+  &-content {
+    margin: 10px 10px 10px 40px;
+    flex: 1 1 auto;
+
+    &_translate {
+      margin: 10px;
+    }
+
+    &_key {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+    }
+
+    &_key-input {
+      width: 100%;
+    }
+
+    &_key-icon {
+      margin-right: 10px;
+    }
+  }
+
+  &-footer {
+    margin: 10px;
+    width: 100%;
+    max-width: 500px;
+
+    &_error {
+      line-height: 30px;
+      display: flex;
+      word-break: break-all;
+    }
+
+    &_error-text {
+      padding: 0 10px;
+      width: 100px;
+    }
+
+    &_error-key {
+      color: gray;
+      padding: 0 10px;
+    }
+  }
+
+
+
+}

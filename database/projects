@@ -1,0 +1,851 @@
+{
+  "main": [
+    {
+      "id": "8LwE_Do_p",
+      "name": "New Project",
+      "viewPath": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\**\\*.{html,ts}",
+      "languagesPath": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\*.json",
+      "settings": {
+        "linting": {
+          "views": "warning",
+          "zombies": "warning"
+        },
+        "settings": {}
+      },
+      "keysModel": [
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Add project "
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Добавить проект"
+            }
+          ],
+          "name": "PAGES.PROJECT.ADD_PROJECT"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Languages Path"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Путь к переводам"
+            }
+          ],
+          "name": "PAGES.PROJECT.LANGUAGES_PATH"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Project Name"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Название проекта"
+            }
+          ],
+          "name": "PAGES.PROJECT.PROJECT_NAME"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "add ley"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "добавить ключ"
+            }
+          ],
+          "name": "PAGES.PROJECT.ADD_KEY"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Linting Settings"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Настройки Линтинга"
+            }
+          ],
+          "name": "PAGES.PROJECT_SETTING.LINTING_TITLE"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Zombies Keys"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Зомби ключи"
+            }
+          ],
+          "name": "PAGES.PROJECT_SETTING.ZOMBIE"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Views Keys"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Ключи на Вьюхах"
+            }
+          ],
+          "name": "PAGES.PROJECT_SETTING.VIEWS"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Project Settings"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Настройки проекта"
+            }
+          ],
+          "name": "PAGES.PROJECT_SETTING.PROJECT_TITLE"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Remove Project"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Удалить проект"
+            }
+          ],
+          "name": "SHARED.BUTTONS.REMOVE_PROJECT"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "new key"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "добавить ключ"
+            }
+          ],
+          "name": "SHARED.BUTTONS.ADD_NEW_KEY"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "refresh"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "обновить"
+            }
+          ],
+          "name": "SHARED.BUTTONS.REFRESH"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-list\\project-list.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-list\\project-list.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Application Settings"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Настройки Программы"
+            }
+          ],
+          "name": "SHARED.BUTTONS.APP_SETTINGS"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-list\\project-list.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-list\\project-list.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Add new project"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "добавить проект"
+            }
+          ],
+          "name": "PAGES.PROJECTS.ADD_NEW_PROJECT"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Open Languages Folder"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Открыть папку с переводами"
+            }
+          ],
+          "name": "PAGES.PROJECT_ITEM.OPEN_LANGUAGES_FOLDER"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Save"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Сохранить"
+            }
+          ],
+          "name": "SHARED.BUTTONS.SAVE"
+        },
+        {
+          "views": [
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+            },
+            {
+              "name": "",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+            }
+          ],
+          "languages": [
+            {
+              "name": "en.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+              "keyValue": "Cancel"
+            },
+            {
+              "name": "ru.json",
+              "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+              "keyValue": "Закрыть"
+            }
+          ],
+          "name": "SHARED.BUTTONS.CANCEL"
+        }
+      ],
+      "lintResult": {
+        "errors": [
+          {
+            "value": "PAGES.APPLICATION_SETTINGS.DIALOG_TITLE",
+            "errorFlow": "views",
+            "errorType": "warning",
+            "currentPath": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html",
+            "absentedPath": [
+              "en.json",
+              "ru.json"
+            ],
+            "suggestions": []
+          },
+          {
+            "value": "PAGES.APPLICATION_SETTINGS.DIALOG_LANGUAGES",
+            "errorFlow": "views",
+            "errorType": "warning",
+            "currentPath": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html",
+            "absentedPath": [
+              "en.json",
+              "ru.json"
+            ],
+            "suggestions": []
+          }
+        ],
+        "maxCountWarning": 0
+      },
+      "languagesModel": [
+        {
+          "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json",
+          "keys": [
+            {
+              "name": "PAGES.PROJECT.ADD_PROJECT",
+              "value": "Add project ",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT.LANGUAGES_PATH",
+              "value": "Languages Path",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT.PROJECT_NAME",
+              "value": "Project Name",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT.ADD_KEY",
+              "value": "add ley",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_SETTING.LINTING_TITLE",
+              "value": "Linting Settings",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_SETTING.ZOMBIE",
+              "value": "Zombies Keys",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_SETTING.VIEWS",
+              "value": "Views Keys",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_SETTING.PROJECT_TITLE",
+              "value": "Project Settings",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.REMOVE_PROJECT",
+              "value": "Remove Project",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.ADD_NEW_KEY",
+              "value": "new key",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.REFRESH",
+              "value": "refresh",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.APP_SETTINGS",
+              "value": "Application Settings",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-list\\project-list.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECTS.ADD_NEW_PROJECT",
+              "value": "Add new project",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-list\\project-list.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_ITEM.OPEN_LANGUAGES_FOLDER",
+              "value": "Open Languages Folder",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.SAVE",
+              "value": "Save",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.CANCEL",
+              "value": "Cancel",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\en.json"
+              ]
+            }
+          ],
+          "name": "en.json"
+        },
+        {
+          "path": "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json",
+          "keys": [
+            {
+              "name": "PAGES.PROJECT.ADD_PROJECT",
+              "value": "Добавить проект",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT.LANGUAGES_PATH",
+              "value": "Путь к переводам",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT.PROJECT_NAME",
+              "value": "Название проекта",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT.ADD_KEY",
+              "value": "добавить ключ",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_SETTING.LINTING_TITLE",
+              "value": "Настройки Линтинга",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_SETTING.ZOMBIE",
+              "value": "Зомби ключи",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_SETTING.VIEWS",
+              "value": "Ключи на Вьюхах",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_SETTING.PROJECT_TITLE",
+              "value": "Настройки проекта",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.REMOVE_PROJECT",
+              "value": "Удалить проект",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.ADD_NEW_KEY",
+              "value": "добавить ключ",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.REFRESH",
+              "value": "обновить",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.APP_SETTINGS",
+              "value": "Настройки Программы",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-list\\project-list.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECTS.ADD_NEW_PROJECT",
+              "value": "добавить проект",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-list\\project-list.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "PAGES.PROJECT_ITEM.OPEN_LANGUAGES_FOLDER",
+              "value": "Открыть папку с переводами",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.SAVE",
+              "value": "Сохранить",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item-settings\\project-item-settings.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-item\\project-item.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            },
+            {
+              "name": "SHARED.BUTTONS.CANCEL",
+              "value": "Закрыть",
+              "views": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\application\\application-settings-dialog\\application-settings-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-dialog\\project-create-dialog.component.html",
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\app\\modules\\project\\project-create-key-dialog\\project-create-key-dialog.component.html"
+              ],
+              "languages": [
+                "D:\\github\\svoboda-rabstvo\\ngx-translate-editor\\src\\assets\\i18n\\ru.json"
+              ]
+            }
+          ],
+          "name": "ru.json"
+        }
+      ]
+    }
+  ],
+  "settings": {}
+}

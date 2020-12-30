@@ -1,0 +1,38 @@
+<mat-card class="project-item-settings-card">
+  <h2>{{ 'PAGES.PROJECT_SETTING.LINTING_TITLE' | translate }}</h2>
+  <form [formGroup]="projectLintingSettingsForm" >
+    <mat-form-field class="project-create-dialog_form-field">
+      <mat-label>{{ 'PAGES.PROJECT_SETTING.ZOMBIE' | translate }}</mat-label>
+      <mat-select [formControl]="projectLintingZombieControl">
+        <mat-option *ngFor="let errorType of errorTypesList" [value]="errorType">{{errorType}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="project-create-dialog_form-field">
+      <mat-label>{{ 'PAGES.PROJECT_SETTING.VIEWS' | translate }}</mat-label>
+      <mat-select [formControl]="projectLintingViewsControl">
+        <mat-option *ngFor="let errorType of errorTypesList" [value]="errorType">{{errorType}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br/>
+    <button mat-raised-button
+            class="project-list-header_button"
+            (click)="saveProjectLintingAction()">
+      <mat-icon>save</mat-icon>
+      {{ 'SHARED.BUTTONS.SAVE' | translate }}
+    </button>
+  </form>
+</mat-card>
+<mat-card class="project-item-settings-card">
+  <h2>{{ 'PAGES.PROJECT_SETTING.PROJECT_TITLE' | translate }}</h2>
+  <form [formGroup]="projectItemSettingsForm" >
+    <button mat-raised-button
+            color="warn"
+            class="project-list-header_button"
+            (click)="removeProjectAction()">
+      <mat-icon>delete</mat-icon>
+      {{ 'SHARED.BUTTONS.REMOVE_PROJECT' | translate }}
+    </button>
+  </form>
+</mat-card>
+

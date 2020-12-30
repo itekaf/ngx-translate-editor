@@ -1,0 +1,18 @@
+{
+    "PAGES.PROJECT.ADD_PROJECT": "Добавить проект",
+    "PAGES.PROJECT.LANGUAGES_PATH": "Путь к переводам",
+    "PAGES.PROJECT.PROJECT_NAME": "Название проекта",
+    "PAGES.PROJECT.ADD_KEY": "добавить ключ",
+    "PAGES.PROJECT_SETTING.LINTING_TITLE": "Настройки Линтинга",
+    "PAGES.PROJECT_SETTING.ZOMBIE": "Зомби ключи",
+    "PAGES.PROJECT_SETTING.VIEWS": "Ключи на Вьюхах",
+    "PAGES.PROJECT_SETTING.PROJECT_TITLE": "Настройки проекта",
+    "SHARED.BUTTONS.REMOVE_PROJECT": "Удалить проект",
+    "SHARED.BUTTONS.ADD_NEW_KEY": "добавить ключ",
+    "SHARED.BUTTONS.REFRESH": "обновить",
+    "SHARED.BUTTONS.APP_SETTINGS": "Настройки Программы",
+    "PAGES.PROJECTS.ADD_NEW_PROJECT": "добавить проект",
+    "PAGES.PROJECT_ITEM.OPEN_LANGUAGES_FOLDER": "Открыть папку с переводами",
+    "SHARED.BUTTONS.SAVE": "Сохранить",
+    "SHARED.BUTTONS.CANCEL": "Закрыть"
+}

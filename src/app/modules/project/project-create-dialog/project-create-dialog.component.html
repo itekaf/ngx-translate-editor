@@ -1,0 +1,37 @@
+<div class="project-create-dialog">
+  <h1 mat-dialog-title>{{ 'PAGES.PROJECT.ADD_PROJECT' | translate }}</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="projectFormGroup" >
+      <mat-form-field class="project-create-dialog_form-field">
+        <mat-label>{{ 'PAGES.PROJECT.LANGUAGES_PATH' | translate }}</mat-label>
+        <input matInput [formControl]="projectLanguagesPathControl">
+        <button mat-button *ngIf="projectLanguagesPathControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="resetProjectLanguagesPathAction()">
+          <mat-icon aria-hidden="false">clear</mat-icon>
+        </button>
+      </mat-form-field>
+      <div>
+        <button mat-raised-button mat-button
+                (click)="OpenLanguagesFolderAction()">
+          {{ 'PAGES.PROJECT_ITEM.OPEN_LANGUAGES_FOLDER' | translate }}
+        </button>
+      </div>
+      <br>
+      <mat-form-field class="project-create-dialog_form-field">
+        <mat-label>{{ 'PAGES.PROJECT.PROJECT_NAME' | translate }}</mat-label>
+        <input matInput [formControl]="projectNameControl">
+        <button mat-button *ngIf="projectNameControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="resetProjectNameAction()">
+          <mat-icon aria-hidden="false">clear</mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClickAction()">
+      {{ 'SHARED.BUTTONS.CANCEL' | translate }}
+    </button>
+    <button mat-raised-button color="primary"  [mat-dialog-close]="projectFormGroup.value" cdkFocusInitial>
+      {{ 'SHARED.BUTTONS.SAVE' | translate }}
+    </button>
+  </div>
+</div>
+

@@ -7,17 +7,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-
 import { AppRoutingModule } from './app-routing.module';
-
-// NG Translate
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
-
+import { MatSliderModule, MatTabsModule } from '@angular/material';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { ProjectModule } from 'app/modules/project/project.module';
-import { MatSliderModule, MatTabsModule } from '@angular/material';
+import { ApplicationModule } from './modules/application/application.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -29,6 +25,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   imports: [
     BrowserModule,
     FormsModule,
+    ApplicationModule,
     HttpClientModule,
     CoreModule,
     SharedModule,

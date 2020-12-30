@@ -1,23 +1,36 @@
 version: 2.1
-jobs:
-  test:
-    docker:
-      - image: circleci/node:12.16
-    steps:
-      - checkout
-      - run: echo "Running tests"
-      - run: npm install
-      - run: npm test
-  build:
-    docker:
-      - image: circleci/node:12.16
-    steps:
-      - checkout
-      - run: echo "build project"
-      - npm install
-      - npm run test
-workflows:
-  node-tests:
-    jobs:
-      - node/test
 
+orbs:
+  node: circleci/node@2.0.3
+
+commands:
+  setup-node-and-yarn-install-with-cache:
+    steps:
+      - node/install:
+          install-yarn: true
+          node-version: latest
+      - node/install-packages:
+          pkg-manager: yarn
+          cache-key: yarn.lock
+
+jobs:
+  lint-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - setup-node-and-yarn-install-with-cache
+      - run:
+          name: Lint
+          command: npm run lint
+      - run:
+          name: Check types
+          command: npm run check-types
+      - run:
+          name: Run tests
+          command: npm run test
+
+workflows:
+  run-ci:
+    jobs:
+      - lint-and-test

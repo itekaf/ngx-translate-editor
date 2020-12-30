@@ -6,10 +6,23 @@
 
 ## Table of Contents
 
-- [Installation](#Installation)
+- [Usage](#Usage)
 - [Contribute](#Contribute)
 
 ## Installation
+```bash
+git clone https://github.com/svoboda-rabstvo/ngx-translate-editor.git
+cd ngx-translate-editor
+npm install --legacy-peer-deps
+
+npm run electron:windows 
+or
+npm run electron:mac
+or
+npm run electron:linux
+```
+
+Then go to the `release` folder and open the app. 
 
 ## Contribute
 

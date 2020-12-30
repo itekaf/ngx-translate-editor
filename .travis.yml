@@ -1,7 +1,7 @@
 language: node_js
 node_js: stable
 install:
-  - npm install --force
+  - npm install --legacy-peer-deps
 
 jobs:
   include:

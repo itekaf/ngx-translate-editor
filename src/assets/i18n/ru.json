@@ -1,4 +1,6 @@
 {
+    "PAGES.APPLICATION_SETTINGS.DIALOG_LANGUAGES": "Языки",
+    "PAGES.APPLICATION_SETTINGS.DIALOG_TITLE": "Настройки программы",
     "PAGES.PROJECT.ADD_PROJECT": "Добавить проект",
     "PAGES.PROJECT.LANGUAGES_PATH": "Путь к переводам",
     "PAGES.PROJECT.PROJECT_NAME": "Название проекта",

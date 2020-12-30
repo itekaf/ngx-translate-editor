@@ -1,4 +1,6 @@
 {
+    "PAGES.APPLICATION_SETTINGS.DIALOG_LANGUAGES": "Languages",
+    "PAGES.APPLICATION_SETTINGS.DIALOG_TITLE": "Application Settings",
     "PAGES.PROJECT.ADD_PROJECT": "Add project ",
     "PAGES.PROJECT.LANGUAGES_PATH": "Languages Path",
     "PAGES.PROJECT.PROJECT_NAME": "Project Name",

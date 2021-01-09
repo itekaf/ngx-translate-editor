@@ -62,6 +62,7 @@
               <mat-icon *ngIf="error.errorType === 'warning'" color="primary">warning</mat-icon>
               <span *ngIf="error.errorFlow === 'views'"  class="project-item-footer_error-text">Missed key: </span>
               <span *ngIf="error.errorFlow === 'zombie'" class="project-item-footer_error-text">Zombie key: </span>
+              <span *ngIf="error.errorFlow === 'misprint'" class="project-item-footer_error-text">Misprint key: </span>
               <span class="project-item-footer_error-key">{{ error.value }}</span>
             </div>
           </mat-card>

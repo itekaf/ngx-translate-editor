@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {NgxTranslateLint, IRulesConfig, ResultCliModel, ErrorTypes, KeyModelWithLanguages, LanguagesModel} from 'ngx-translate-lint';
 import {ProjectLintingModel} from "../../models";
-
+import { sortedUniqBy } from 'lodash';
+import {ResultErrorModel} from "ngx-translate-lint/dist/src/core/models/results/ResultErrorModel";
 @Injectable({
   providedIn: 'root'
 })
@@ -31,6 +32,7 @@ export class NgxTranslateLintService {
 
     const ngxTranslateLint = new NgxTranslateLint(viewsPath, languagesPath, this.ignoredLanguagesPath, lintingConfig);
     const result: ResultCliModel = ngxTranslateLint.lint();
+    result.errors  = sortedUniqBy(result.errors, (x: ResultErrorModel) => x.value);
     return result;
   }
 

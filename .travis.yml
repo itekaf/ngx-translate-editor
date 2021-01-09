@@ -8,7 +8,7 @@ jobs:
     - stage: tests
       node_js: stable
       script:
-        - npm run test
+        - npm run lint:translate
     - stage: semantic release
       if: branch = master AND type = push
       node_js: stable

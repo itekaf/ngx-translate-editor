@@ -36,7 +36,7 @@
     "lint": "ng lint",
     "lint:translate": "npx ngx-translate-lint -p ./src/app/**/*.{html,ts} -l ./src/assets/i18n/*.json",
     "semantic-release": "semantic-release",
-    "release": "npm run electron:windows"
+    "release": "npm run electron:linux && npm run electron:windows"
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "8.2.0",

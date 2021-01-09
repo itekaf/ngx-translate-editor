@@ -55,7 +55,7 @@ export class ProjectItemComponent implements OnInit {
   }
 
   public removeKeyAction(key: KeyModelWithLanguages): void {
-    this.project.keysModel = this.project.keysModel.filter(x => x.name !== key.name);
+    this.projectKeys = this.project.keysModel.filter(x => x.name !== key.name);
   }
 
   public saveProjectLintingSettingsAction($event: ProjectMainSettingModel): void {
@@ -77,7 +77,7 @@ export class ProjectItemComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result: KeyModelWithLanguages) => {
       if (result && result.name) {
         const keyModel = new KeyModelWithLanguages(result.name, this.getProjectLanguages());
-        this.project.keysModel.unshift(keyModel);
+        this.projectKeys.unshift(keyModel);
         keyModel.languages.forEach((lang, index) => {
           this.projectItemKeysForm.addControl(index + result.name, new FormControl(lang.keyValue || ""));
         });
@@ -96,6 +96,7 @@ export class ProjectItemComponent implements OnInit {
   }
 
   public saveProjectAction(): void {
+    this.project.keysModel = this.projectKeys;
     this.fileService.saveFiles(this.project);
     this.updateProject();
   }

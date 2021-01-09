@@ -24,8 +24,9 @@ export class ProjectCreateKeyDialogComponent implements OnInit {
   public onNoClickAction(): void {
     this.dialogRef.close();
   }
-  public resetKeyNameAction(): void {
-    this.keyNameControl.setValue("");
+
+  public keyDownFunction() {
+    this.dialogRef.close(this.keyFormGroup.value);
   }
 
   private buildForm(): void {

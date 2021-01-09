@@ -1,15 +1,13 @@
 <div class="project-create-dialog">
   <h1 mat-dialog-title>{{ 'PAGES.PROJECT.ADD_KEY' | translate }}</h1>
+  <form [formGroup]="keyFormGroup" (keyup.enter)="keyDownFunction()">
   <div mat-dialog-content>
-    <form [formGroup]="keyFormGroup" >
+
       <mat-form-field class="project-create-dialog_form-field">
         <mat-label>{{ 'PAGES.PROJECT.LANGUAGES_PATH' | translate }}</mat-label>
-        <input matInput [formControl]="keyNameControl">
-        <button mat-button *ngIf="keyNameControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="resetKeyNameAction()">
-          <mat-icon aria-hidden="false">clear</mat-icon>
-        </button>
+        <input matInput [formControl]="keyNameControl" autofocus>
       </mat-form-field>
-    </form>
+
   </div>
   <div mat-dialog-actions>
     <button mat-button (click)="onNoClickAction()">
@@ -19,4 +17,5 @@
       {{ 'SHARED.BUTTONS.SAVE' | translate }}
     </button>
   </div>
+  </form>
 </div>

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProjectModel } from 'app/core/models/project.model';
 import { FormControl, FormGroup} from '@angular/forms';
-import { KeyModelWithLanguages, LanguagesModelWithKey } from "ngx-translate-lint";
+import {KeyModel, KeyModelWithLanguages, LanguagesModelWithKey} from "ngx-translate-lint";
 import { MatDialog } from "@angular/material/dialog";
 import { ProjectCreateKeyDialogComponent } from "../project-create-key-dialog/project-create-key-dialog.component";
 import { NgxTranslateLintService } from "../../../core/services/ngx-translate-lint/ngx-translate-lint.service";
@@ -21,7 +21,9 @@ export class ProjectItemComponent implements OnInit {
   @Output() saveProjectSettingsEmitter: EventEmitter<ProjectModel> = new EventEmitter<ProjectModel>();
 
   public showFiller = false;
+  public projectKeys: KeyModelWithLanguages[]  = [];
   public projectItemKeysForm: FormGroup;
+  public projectKeySearchControl: FormControl = new FormControl();
 
   constructor(
     private fileService: FilesService,
@@ -31,7 +33,12 @@ export class ProjectItemComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.initData();
     this.buildForm();
+  }
+
+  public initData() {
+    this.projectKeys = this.project.keysModel;
   }
 
   public removeKeyAction(key: KeyModelWithLanguages): void {
@@ -92,6 +99,12 @@ export class ProjectItemComponent implements OnInit {
     this.project.keysModel.forEach((key) => {
       key.languages.forEach((lang, index) => {
         this.projectItemKeysForm.addControl(index + key.name, new FormControl(lang.keyValue));
+      });
+    });
+
+    this.projectKeySearchControl.valueChanges.subscribe((value) => {
+      this.projectKeys = this.project.keysModel.filter((key) => {
+        return key.name.toLowerCase().trim().includes(value.toLowerCase().trim());
       });
     });
     this.projectItemKeysForm.valueChanges.subscribe((value) => {

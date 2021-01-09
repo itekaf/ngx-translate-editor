@@ -38,13 +38,12 @@
         </mat-card>
       <form [formGroup]="projectItemKeysForm">
         <div class="project-item_flex">
-
             <div class="project-item-key">
-
               <div *ngFor="let key of project.keysModel" class="project-item-key_content">
                 <mat-card class="project-item-content_translate">
                   <div class="project-item-content_key">
-                    <mat-icon  class="project-item-content_key-icon">translate</mat-icon> {{ key.name }}
+                    <mat-icon  class="project-item-content_key-icon">translate</mat-icon>
+                    <span class="project-item-content_key-name">{{ key.name }}</span>
                     <mat-icon color="warn" class="project-item-content_key-icon" (click)="removeKeyAction(key)">delete</mat-icon>
                   </div>
                   <div *ngFor="let lang of key.languages; index as i">

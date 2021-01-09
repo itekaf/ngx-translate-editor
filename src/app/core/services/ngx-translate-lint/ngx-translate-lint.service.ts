@@ -32,7 +32,7 @@ export class NgxTranslateLintService {
 
     const ngxTranslateLint = new NgxTranslateLint(viewsPath, languagesPath, this.ignoredLanguagesPath, lintingConfig);
     const result: ResultCliModel = ngxTranslateLint.lint();
-    result.errors  = sortedUniqBy(result.errors, (x: ResultErrorModel) => x.value);
+    result.errors = sortedUniqBy(result.errors, (x: ResultErrorModel) => x.value);
     return result;
   }
 

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, HostListener } from '@angular/core';
 import { ProjectModel } from 'app/core/models/project.model';
 import { FormControl, FormGroup} from '@angular/forms';
 import {KeyModel, KeyModelWithLanguages, LanguagesModelWithKey} from "ngx-translate-lint";
@@ -35,6 +35,19 @@ export class ProjectItemComponent implements OnInit {
   ngOnInit(): void {
     this.initData();
     this.buildForm();
+  }
+
+  @HostListener('window:keyup', ['$event'])
+  onKeyPress($event: KeyboardEvent) {
+    if (($event.ctrlKey || $event.metaKey) && $event.keyCode == 75) {
+      this.openAddNewKeyDialogAction()
+    }
+    if (($event.ctrlKey || $event.metaKey) && $event.keyCode == 83) {
+      this.saveProjectAction();
+    }
+    if (($event.ctrlKey || $event.metaKey) && $event.keyCode == 82) {
+      this.refreshProjectAction();
+    }
   }
 
   public initData() {

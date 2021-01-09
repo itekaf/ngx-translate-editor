@@ -10,11 +10,11 @@
     "PAGES.PROJECT_SETTING.VIEWS": "Views Keys",
     "PAGES.PROJECT_SETTING.PROJECT_TITLE": "Project Settings",
     "SHARED.BUTTONS.REMOVE_PROJECT": "Remove Project",
-    "SHARED.BUTTONS.ADD_NEW_KEY": "new key",
-    "SHARED.BUTTONS.REFRESH": "refresh",
+    "SHARED.BUTTONS.ADD_NEW_KEY": "new key (ctrl + k)",
+    "SHARED.BUTTONS.REFRESH": "refresh (ctrl + r)",
     "SHARED.BUTTONS.APP_SETTINGS": "Application Settings",
     "PAGES.PROJECTS.ADD_NEW_PROJECT": "Add new project",
     "PAGES.PROJECT_ITEM.OPEN_LANGUAGES_FOLDER": "Open Languages Folder",
-    "SHARED.BUTTONS.SAVE": "Save",
+    "SHARED.BUTTONS.SAVE": "Save (ctrl + s)",
     "SHARED.BUTTONS.CANCEL": "Cancel"
 }

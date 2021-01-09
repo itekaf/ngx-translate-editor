@@ -10,11 +10,11 @@
     "PAGES.PROJECT_SETTING.VIEWS": "Ключи на Вьюхах",
     "PAGES.PROJECT_SETTING.PROJECT_TITLE": "Настройки проекта",
     "SHARED.BUTTONS.REMOVE_PROJECT": "Удалить проект",
-    "SHARED.BUTTONS.ADD_NEW_KEY": "добавить ключ",
-    "SHARED.BUTTONS.REFRESH": "обновить",
+    "SHARED.BUTTONS.ADD_NEW_KEY": "добавить ключ (ctrl + k)",
+    "SHARED.BUTTONS.REFRESH": "обновить (ctrl + r)",
     "SHARED.BUTTONS.APP_SETTINGS": "Настройки Программы",
     "PAGES.PROJECTS.ADD_NEW_PROJECT": "добавить проект",
     "PAGES.PROJECT_ITEM.OPEN_LANGUAGES_FOLDER": "Открыть папку с переводами",
-    "SHARED.BUTTONS.SAVE": "Сохранить",
+    "SHARED.BUTTONS.SAVE": "Сохранить (ctrl + s)",
     "SHARED.BUTTONS.CANCEL": "Закрыть"
 }

@@ -1,8 +1,9 @@
 {
+    "PAGES.PROJECT.ADD_PROJECT": "Add Project ",
     "PAGES.APPLICATION_SETTINGS.DIALOG_LANGUAGES": "Languages",
     "PAGES.APPLICATION_SETTINGS.DIALOG_TITLE": "Application Settings",
-    "PAGES.PROJECT.ADD_PROJECT": "Add project ",
     "PAGES.PROJECT.LANGUAGES_PATH": "Languages Path",
+    "PAGES.PROJECT.LANGUAGE_KEY": "Language Key",
     "PAGES.PROJECT.PROJECT_NAME": "Project Name",
     "PAGES.PROJECT.ADD_KEY": "add ley",
     "PAGES.PROJECT_SETTING.LINTING_TITLE": "Linting Settings",

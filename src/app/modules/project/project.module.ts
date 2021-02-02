@@ -11,6 +11,7 @@ import { ProjectItemComponent } from './project-item/project-item.component';
 import { ProjectCreateDialogComponent } from './project-create-dialog/project-create-dialog.component';
 import { ProjectItemSettingsComponent } from './project-item-settings/project-item-settings.component';
 import { ProjectCreateKeyDialogComponent } from './project-create-key-dialog/project-create-key-dialog.component';
+import { SearchKeyByNamePipe } from './project-item/pipe/search-key-by-name.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProjectCreateKeyDialogComponent } from './project-create-key-dialog/pro
     ProjectListComponent,
     ProjectCreateDialogComponent,
     ProjectCreateKeyDialogComponent,
-    ProjectItemSettingsComponent
+    ProjectItemSettingsComponent,
+    SearchKeyByNamePipe
   ],
   imports: [
     CommonModule,

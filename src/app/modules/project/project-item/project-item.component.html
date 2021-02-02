@@ -44,7 +44,7 @@
         <form [formGroup]="projectItemKeysForm">
           <div class="project-item_flex">
               <div class="project-item-key">
-                <div *ngFor="let key of projectKeys" class="project-item-key_content">
+                <div *ngFor="let key of projectKeys | searchKeyByName: projectKeySearchControl.value" class="project-item-key_content">
                   <mat-card class="project-item-content_translate">
                     <div class="project-item-content_key">
                       <mat-icon  class="project-item-content_key-icon">translate</mat-icon>

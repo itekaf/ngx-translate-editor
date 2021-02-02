@@ -136,12 +136,7 @@ export class ProjectItemComponent implements OnInit {
         this.projectItemKeysForm.addControl(index + key.name, new FormControl(lang.keyValue));
       });
     });
-
-    this.projectKeySearchControl.valueChanges.subscribe((value) => {
-      this.projectKeys = this.project.keysModel.filter((key) => {
-        return key.name.toLowerCase().trim().includes(value.toLowerCase().trim());
-      });
-    });
+    
     this.projectItemKeysForm.valueChanges.subscribe((value) => {
       this.project.keysModel.forEach((key) => {
         key.languages.forEach((lang, index) => {

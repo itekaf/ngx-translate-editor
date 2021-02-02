@@ -1,8 +1,9 @@
 {
+    "PAGES.PROJECT.ADD_PROJECT": "Добавить проект",
     "PAGES.APPLICATION_SETTINGS.DIALOG_LANGUAGES": "Языки",
     "PAGES.APPLICATION_SETTINGS.DIALOG_TITLE": "Настройки программы",
-    "PAGES.PROJECT.ADD_PROJECT": "Добавить проект",
     "PAGES.PROJECT.LANGUAGES_PATH": "Путь к переводам",
+    "PAGES.PROJECT.LANGUAGE_KEY": "Ключи перевода",
     "PAGES.PROJECT.PROJECT_NAME": "Название проекта",
     "PAGES.PROJECT.ADD_KEY": "добавить ключ",
     "PAGES.PROJECT_SETTING.LINTING_TITLE": "Настройки Линтинга",

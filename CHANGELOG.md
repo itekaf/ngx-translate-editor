@@ -1,5 +1,17 @@
 # CHANGELOG
 
+# [1.1.0](https://github.com/svoboda-rabstvo/ngx-translate-editor/compare/v1.0.2...v1.1.0) (2021-02-02)
+
+
+### Bug Fixes
+
+* when you search and key and save files all keys is removed ([15a0437](https://github.com/svoboda-rabstvo/ngx-translate-editor/commit/15a0437f3eed5ef58e2006437fa9bff857db24fa)), closes [#17](https://github.com/svoboda-rabstvo/ngx-translate-editor/issues/17)
+
+
+### Features
+
+* add remove button zombie keys ([1b57b47](https://github.com/svoboda-rabstvo/ngx-translate-editor/commit/1b57b4736e222f69d4fc8822f8dae4e3717aaee6))
+
 ## [1.0.2](https://github.com/svoboda-rabstvo/ngx-translate-editor/compare/v1.0.1...v1.0.2) (2021-01-09)
 
 ## [1.0.1](https://github.com/svoboda-rabstvo/ngx-translate-editor/compare/v1.0.0...v1.0.1) (2021-01-09)

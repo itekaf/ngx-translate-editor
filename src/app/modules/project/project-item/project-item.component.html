@@ -51,8 +51,9 @@
                       <span class="project-item-content_key-name">{{ key.name }}</span>
                       <mat-icon color="warn" class="project-item-content_key-icon" (click)="removeKeyAction(key)">delete</mat-icon>
                     </div>
+
                     <div *ngFor="let lang of key.languages; index as i">
-                      <mat-form-field class="project-item-content_key-input">
+                      <mat-form-field class="project-item-content_key-input" appearance="outline">
                         <mat-label>{{ lang.name }}</mat-label>
                         <input matInput formControlName="{{ i + key.name}}">
                       </mat-form-field>
@@ -61,16 +62,21 @@
                 </div>
               </div>
 
-            <mat-card class="project-item-footer" *ngIf="project.lintResult.errors.length !== 0">
-              <div *ngFor="let error of project.lintResult.errors" class="project-item-footer_error">
-                <mat-icon *ngIf="error.errorType === 'error'" color="warn">error</mat-icon>
-                <mat-icon *ngIf="error.errorType === 'warning'" color="primary">warning</mat-icon>
-                <span *ngIf="error.errorFlow === 'views'"  class="project-item-footer_error-text">Missed key: </span>
-                <span *ngIf="error.errorFlow === 'zombie'" class="project-item-footer_error-text">Zombie key: </span>
-                <span *ngIf="error.errorFlow === 'misprint'" class="project-item-footer_error-text">Misprint key: </span>
-                <span class="project-item-footer_error-key">{{ error.value }}</span>
-              </div>
-            </mat-card>
+              <mat-card class="project-item-footer" *ngIf="project.lintResult.errors.length !== 0">
+                <div *ngFor="let error of project.lintResult.errors" class="project-item-footer_error">
+                  <button mat-icon-button color="primary" class="project-item-footer_error-button" *ngIf="error.errorFlow === 'views'" (click)="createKeyByNameAction(error.value)">
+                    <mat-icon>vpn_key</mat-icon>
+                  </button>
+                  <button mat-icon-button color="accent"  class="project-item-footer_error-button" *ngIf="error.errorFlow === 'zombie'" (click)="removeKeyByNameAction(error.value)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+
+                  <span *ngIf="error.errorFlow === 'views'"  class="project-item-footer_error-text">Missed key: </span>
+                  <span *ngIf="error.errorFlow === 'zombie'" class="project-item-footer_error-text">Zombie key: </span>
+                  <span *ngIf="error.errorFlow === 'misprint'" class="project-item-footer_error-text">Misprint key: </span>
+                  <span class="project-item-footer_error-key">{{ error.value }}</span>
+                </div>
+              </mat-card>
 
           </div>
         </form>

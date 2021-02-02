@@ -1,7 +1,12 @@
 .project-item {
+  height: 100%;
   &_flex {
     display: flex;
   }
+  &-container {
+    height: 100%;
+  }
+
   &-sidenav-content_settings {
     background: #fff;
     color: gray;
@@ -86,14 +91,24 @@
     max-width: 500px;
 
     &_error {
-      line-height: 30px;
+      line-height: 40px;
       display: flex;
       word-break: break-all;
+      min-height: 40px;
+      margin: 10px 0;
     }
 
     &_error-text {
       padding: 0 10px;
       width: 100px;
+      min-width: 100px;
+    }
+
+    &_error-button {
+      margin: 0 10px;
+      border: 1px solid;
+      width: 40px !important;
+      height: 40px !important;
     }
 
     &_error-key {

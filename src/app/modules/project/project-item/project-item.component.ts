@@ -56,6 +56,8 @@ export class ProjectItemComponent implements OnInit {
 
   public removeKeyAction(key: KeyModelWithLanguages): void {
     this.projectKeys = this.project.keysModel.filter(x => x.name !== key.name);
+    this.saveProject();
+    this.updateProject();
   }
 
   public saveProjectLintingSettingsAction($event: ProjectMainSettingModel): void {
@@ -67,8 +69,43 @@ export class ProjectItemComponent implements OnInit {
     this.removeProjectEmitter.emit(this.project);
   }
 
+  public removeKeyByNameAction(key: string): void {
+    this.projectKeys = this.project.keysModel.filter(x => x.name !== key);
+    this.saveProject();
+    this.updateProject();
+  }
+
+  public createKeyByNameAction(key: string): void {
+    const keyModel = new KeyModelWithLanguages(key, this.getProjectLanguages());
+    this.createNewKeyDialog(keyModel);
+  }
+
   public openAddNewKeyDialogAction(): void {
     const keyModel = new KeyModelWithLanguages("", this.getProjectLanguages());
+    this.createNewKeyDialog(keyModel);
+  }
+
+  public refreshProjectAction(): void {
+    this.updateProject();
+  }
+
+  private getProjectLanguages(): LanguagesModelWithKey[] {
+    return this.project.languagesModel.map((lang) => {
+      return new LanguagesModelWithKey(lang.name, lang.path, "");
+    });
+  }
+
+  public saveProjectAction(): void {
+    this.saveProject();
+    this.updateProject();
+  }
+
+  private saveProject(): void {
+    this.project.keysModel = this.projectKeys;
+    this.fileService.saveFiles(this.project);
+  }
+
+  private createNewKeyDialog(keyModel: KeyModelWithLanguages): void {
     const dialogRef = this.dialog.open(ProjectCreateKeyDialogComponent, {
       width: '550px',
       data: keyModel
@@ -83,22 +120,6 @@ export class ProjectItemComponent implements OnInit {
         });
       }
     });
-  }
-
-  public refreshProjectAction(): void {
-    this.updateProject();
-  }
-
-  private getProjectLanguages(): LanguagesModelWithKey[] {
-    return this.project.languagesModel.map((lang) => {
-      return new LanguagesModelWithKey(lang.name, lang.path, "");
-    });
-  }
-
-  public saveProjectAction(): void {
-    this.project.keysModel = this.projectKeys;
-    this.fileService.saveFiles(this.project);
-    this.updateProject();
   }
 
   private updateProject(): void {

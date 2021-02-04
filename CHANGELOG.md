@@ -1,5 +1,19 @@
 # CHANGELOG
 
+# [1.2.0](https://github.com/svoboda-rabstvo/ngx-translate-editor/compare/v1.1.0...v1.2.0) (2021-02-04)
+
+
+### Bug Fixes
+
+* update angualr/cli to 11 version ([05a0716](https://github.com/svoboda-rabstvo/ngx-translate-editor/commit/05a07162579ac27f8a4a313646eef75cb56b3870))
+* update angular/cdk to 11 version ([62a3a32](https://github.com/svoboda-rabstvo/ngx-translate-editor/commit/62a3a32257ff73036e773919b0a5181584f18325))
+
+
+### Features
+
+* update angular material ([f109819](https://github.com/svoboda-rabstvo/ngx-translate-editor/commit/f1098194c43cad5f02ce7d940b9d1269d84e0edf))
+* update ngx-translate-lint ([af5abd3](https://github.com/svoboda-rabstvo/ngx-translate-editor/commit/af5abd352c71d9950f29e62cb57922fef0cfc461))
+
 # [1.1.0](https://github.com/svoboda-rabstvo/ngx-translate-editor/compare/v1.0.2...v1.1.0) (2021-02-02)
 
 

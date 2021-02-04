@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# [1.3.0](https://github.com/svoboda-rabstvo/ngx-translate-editor/compare/v1.2.0...v1.3.0) (2021-02-04)
+
+
+### Features
+
+* update project to angular 11 ([3ff77f1](https://github.com/svoboda-rabstvo/ngx-translate-editor/commit/3ff77f1a7e233ae4ca8a72f7ec72bafd50b42c32))
+
 # [1.2.0](https://github.com/svoboda-rabstvo/ngx-translate-editor/compare/v1.1.0...v1.2.0) (2021-02-04)
 
 

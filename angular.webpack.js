@@ -23,9 +23,11 @@ module.exports = (config, options) => {
   config.externals = {
     ...config.externals,
     "fs": 'require("fs")',
+    "os": 'require("os")',
     "path": 'require("path")',
     "stream": 'require("stream")',
-    "constants": 'require("constants")'
+    "constants": 'require("constants")',
+    "tslib": 'require("tslib")'
   };
 
     return config;

@@ -1,16 +1,17 @@
 import * as shortId from 'shortid';
+import { MatDialog } from "@angular/material/dialog";
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { ProjectModel } from 'app/core/models/project.model';
+import { TranslateService } from "@ngx-translate/core";
+
 import { ProjectLowdbService } from 'app/core/services/lowdb/project.lowdb.service';
+import { ProjectModel } from 'app/core/models/project.model';
+import { AppSettingsModel } from "../../../core/models";
+import { defaultProjectSettings } from 'app/core/const/defaultProjectSettings.const';
+import { AppSettingsLowdbService } from "../../../core/services/lowdb/app.settings.lowdb.service";
 import { NgxTranslateLintService } from "../../../core/services/ngx-translate-lint/ngx-translate-lint.service";
-import { MatDialog } from "@angular/material/dialog";
 import { ProjectCreateDialogComponent } from "../project-create-dialog/project-create-dialog.component";
 import { ApplicationSettingsDialogComponent } from "../../application/application-settings-dialog/application-settings-dialog.component";
-import { AppSettingsModel } from "../../../core/models";
-import { TranslateService } from "@ngx-translate/core";
-import { AppSettingsLowdbService } from "../../../core/services/lowdb/app.settings.lowdb.service";
-import { defaultProjectSettings } from 'app/core/const/defaultProjectSettings.const';
 
 @Component({
   selector: 'app-project-list',

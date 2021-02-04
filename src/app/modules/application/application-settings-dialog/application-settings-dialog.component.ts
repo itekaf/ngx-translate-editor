@@ -1,7 +1,7 @@
 import { LanguagesShortEnum } from 'app/core/enum';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from "@angular/forms";
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AppSettingsLowdbService } from "../../../core/services/lowdb/app.settings.lowdb.service";
 import { TranslateService } from "@ngx-translate/core";
 import { AppSettingsModel } from "../../../core/models";

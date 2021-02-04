@@ -3,7 +3,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 
 import {ProjectModel} from "../../../core/models/project.model";
 import {ElectronService} from "../../../core/services";
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-project-create-dialog',
